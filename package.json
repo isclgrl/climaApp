@@ -1,0 +1,24 @@
+{
+  "name": "climaapp",
+  "version": "1.0.0",
+  "description": "Aplicacion desarrollada en Node a manera de practica.\r A traves de consola se obtiene un reporte del estado del clima en la opcion seleccionada",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isclgrl/climaApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isclgrl/climaApp/issues"
+  },
+  "homepage": "https://github.com/isclgrl/climaApp#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.1"
+  }
+}
