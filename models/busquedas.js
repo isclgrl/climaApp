@@ -8,14 +8,28 @@ class Busquedas {
         //TODO: leer db si existe
     }
 
+    get paramsMapbox(){
+        return{
+            'access_token': 'pk.eyJ1IjoiaXNjbGdybCIsImEiOiJjbDBrYTB1aTUwa2h6M2JtaTc4ZmEzOGF6In0.rTRBVmNNI6DuRl1Z7sdQrw',
+            'limit': 5,
+            'language': 'es',
+        }
+    }
+
     async ciudad(lugar = '') {
 
         try {
             //peticion http
-            // console.log('ciudad: ', lugar);
-            const resp = await axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/Durango%2C%20Mexico.json?limit=5&language=es&access_token=pk.eyJ1IjoiaXNjbGdybCIsImEiOiJjbDBrYTB1aTUwa2h6M2JtaTc4ZmEzOGF6In0.rTRBVmNNI6DuRl1Z7sdQrw');
+            const instance = axios.create({
+                baseURL: `https://api.mapbox.com/geocoding/v5/mapbox.places/${lugar}.json`,
+                params: this.paramsMapbox
+            });
+
+            const resp = await instance.get();
+
             console.log("resp: ", resp.data);
-            return []; // retornar los lugares 
+
+            return [];
         } catch (error) {
             return []; // retornar los lugares 
         }
