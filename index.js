@@ -1,7 +1,6 @@
-const { inquireMenu,
-    leerInput,
-    pausa
-} = require('./helpers/inquirer');
+require('dotenv').config();
+
+const { inquireMenu, leerInput, pausa } = require('./helpers/inquirer');
 const Busquedas = require('./models/busquedas');
 
 const main = async () => {

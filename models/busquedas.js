@@ -10,7 +10,7 @@ class Busquedas {
 
     get paramsMapbox(){
         return{
-            'access_token': 'pk.eyJ1IjoiaXNjbGdybCIsImEiOiJjbDBrYTB1aTUwa2h6M2JtaTc4ZmEzOGF6In0.rTRBVmNNI6DuRl1Z7sdQrw',
+            'access_token': process.env.mapbox_key,
             'limit': 5,
             'language': 'es',
         }
